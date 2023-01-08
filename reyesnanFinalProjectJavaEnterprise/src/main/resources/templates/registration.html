@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+ <title>Login</title>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+h1{
+font-size:70px;
+color:blue;
+text-align:center;
+font-family: Arial, Helvetica, sans-serif;
+}
+.form{
+text-align: center;
+margin-top:10%;
+
+}
+.button {
+	
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);}
+
+</style>
+</head>
+
+<body>
+	<h1>Registration Page</h1>
+
+	<form class="userlogin" th:action="@{/register}" method="post">
+
+				<div class="form">
+				  Name: <input type="text" name="name"/><br><br>
+				  Password: <input type="password" name="password"/><br>  
+				  
+				  
+				  <input type="radio" id="user" name="roleId" value=1 >
+				  <label for="user">ADMIN</label>
+				  <input type="radio" id="student" name="roleId" value=2>
+				  <label for="student">USER</label>    <br><br>     
+				
+				<input class="button" type="submit" value="register">
+				</div>
+	</form>
+
+</body>
+</html>

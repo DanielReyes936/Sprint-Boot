@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" 
+xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+   
+<link rel="stylesheet" href="" th:href="@{/css/mystyle.css}">
+
+</head>
+<body>
+<header>
+
+<div id="menu">
+            <ul>
+                
+                    <li><a th:href="@{/login}">Sign In</a></li>
+                    <li><a th:href="@{/register}">Register</a></li>
+                   
+            </ul>
+        </div>
+
+
+</header>
+
+<h1>Market</h1>
+
+
+<div class="imgmarket">
+
+<img  src="" th:src="@{/images/market.jpg}" alt=""/>
+
+
+
+
+</div>
+
+
+</body>
+</html>

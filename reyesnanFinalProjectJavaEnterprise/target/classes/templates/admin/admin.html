@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" 
+integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+   
+<style>
+
+header{
+margin-left :90%;
+}
+.button {
+	
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+ 
+}
+.title{
+font-size:70px;
+color:blue;
+text-align:center;
+font-family: Arial, Helvetica, sans-serif;
+
+}
+.roles{
+font-size:50px;
+color:green;
+text-align:center;
+font-family: Arial, Helvetica, sans-serif;
+}
+table, th, td {
+  border: 1px solid black;
+  margin-left:5%;
+  margin-top:5%;
+  margin-right:5%;
+}
+.list{
+margin-right:15%;
+}
+
+
+</style>
+</head>
+<body>
+<header>
+
+		<div >
+			<form th:action="@{/logout}" method="post">
+				<input class="button" type="submit" value="Logout" />
+			</form>
+		</div>
+
+</header>
+
+		<div class="title">This is a ADMIN Page </div>
+			<div class = "list">
+		<table class="table table-striped">
+			<tr>
+			<th scope="col">Product ID</th>
+			<th scope="col">Name</th>
+			<th scope="col">Description</th>
+			<th scope="col">Price</th>
+			<th scope="col"></th>
+			</tr>
+			<tr th:each="st:${productList}" >
+			<td th:text="${st.productId}" ></td>
+			<td th:text="${st.nameProduct}" ></td>
+			<td th:text="${st.description}" ></td>
+			<td th:text="${st.price}" ></td>
+			<td ><a th:href="@{/deleteProductById/}+${st.productId}">Delete</a></td>
+			</tr>
+		</table>
+
+		</div>
+	
+		<h3>Insert Product <a th:href="@{/Product}">Here</a></h3>
+
+</body>
+
+</html>
