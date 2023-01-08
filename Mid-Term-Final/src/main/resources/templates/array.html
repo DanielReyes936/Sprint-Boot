@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeLeaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Array Print</h1>
+
+<h2 th:each="st:${array}" >
+
+The Array is :  <span th:text=${st.toString}></span>
+<br>
+
+</h2>
+	
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeLeaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Result</h1>
+
+<h2  th:each="st:${result}" >
+The size Array is:  <span th:text="${st.value1}"></span> x <span th:text="${st.value2}"></span><br><br> 
+The User value is: (<span th:text="${st.userx}"></span>),(<span th:text="${st.usery}"></span>)<br><br>
+The level select is :  <span th:text="${st.usern}"></span><br><br>
+The Sum is :  <span th:text="${st.sum}"></span><br>
+
+<br>
+
+</h2>
+	
+
+
+</body>
+</html>

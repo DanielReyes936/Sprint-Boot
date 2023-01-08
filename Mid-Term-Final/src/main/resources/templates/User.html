@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<form action="#" th:action="@{/add}"  th:object="${dataarray}"  method="get">
+
+
+<p>Insert a value to Rows : <input type="text" th:field="*{value1}"/><p>
+<p>Insert a value to Columns : <input type="text" th:field="*{value2}"/><p>
+<p>insert a value to choose an Y : <input type="text" th:field="*{userx}"/><p>
+<p>insert a value to choose an X : <input type="text"  th:field="*{usery}"/><p>
+<p>insert a value n to select the level to add : <input type="text"  th:field="*{usern}"/><p>
+
+<p><input type="submit" value="Create Array"></p>
+
+
+
+</form>
+
+</body>
+</html>

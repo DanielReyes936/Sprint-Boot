@@ -1,0 +1,4 @@
+CREATE table sumTable(
+	id LONG PRIMARY KEY AUTO_INCREMENT,
+	sum LONG
+);
